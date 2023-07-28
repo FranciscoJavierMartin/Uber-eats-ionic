@@ -1,0 +1,7 @@
+{
+  "name": "uber-eats-clone-ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
