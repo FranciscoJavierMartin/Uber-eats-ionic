@@ -7,8 +7,12 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <app-banner [bannerImages]="banners" />
-  <ion-list>
+  <div *ngIf="isLoading">
+    <ion-skeleton-text animated style="height: 25vh" />
+  </div>
+  <app-loading-restaurant *ngIf="isLoading" />
+  <app-banner *ngIf="!isLoading" [bannerImages]="banners" />
+  <ion-list *ngIf="!isLoading">
     <ion-list-header class="ion-margin-bottom">
       <ion-label>
         <h4>Restaurants nearby</h4>
